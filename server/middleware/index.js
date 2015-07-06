@@ -7,8 +7,14 @@ export default function() {
   routes.get("/",
     (req, res) => res.json({
       name: 'cqrs-experiment',
-      version: '1.0.0'}
+      version: '0.0.1'}
   ));
+
+  routes.post('/',
+      (req, res) => {
+        console.log(req.body);
+      }
+  );
 
 	return routes;
 }
